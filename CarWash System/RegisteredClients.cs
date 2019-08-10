@@ -29,7 +29,7 @@ namespace CarWash_System
         private string sConnection;
         private string sql;
 
-        private void button4_Click(object sender, EventArgs e)
+        private void BtnAppEnter_Click(object sender, EventArgs e)
         {
           string appointNumber = txtAppNum.Text;
           string date = txtDate.Text;
@@ -41,9 +41,11 @@ namespace CarWash_System
                 sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=carwash.accdb";
                 dbConn = new OleDbConnection(sConnection);
                 dbConn.Open();
-                dbCmd = new OleDbCommand();
-                dbCmd.CommandText = "insert into Appointments (AppointmentNumber,Date,Time,ClientName) values ('" + appointNumber + "','" + date + "','" + time + "','" + name + "')";
-                dbCmd.Connection = dbConn;
+                dbCmd = new OleDbCommand
+                {
+                    CommandText = "insert into Appointments (AppointmentNumber,Date,Time,ClientName) values ('" + appointNumber + "','" + date + "','" + time + "','" + name + "')",
+                    Connection = dbConn
+                };
                 dbCmd.ExecuteNonQuery();
                 dbConn.Close();
                 MessageBox.Show("User Account has been created ", "User Account", MessageBoxButtons.OKCancel, MessageBoxIcon.Asterisk);
@@ -57,89 +59,87 @@ namespace CarWash_System
         }
 
 
-        private void btnCheck_Click(object sender, EventArgs e)
+        private void BtnCheck_Click(object sender, EventArgs e)
         {
             listBox1.Items.Add("The client logged in has R500.00 \n in their account");
         }
 
-        private void btnDone_Click(object sender, EventArgs e)
+        private void BtnDone_Click(object sender, EventArgs e)
         {
-            double amount = Convert.ToDouble(textBox1.Text);
+            double amount = Convert.ToDouble(txtAmount.Text);
             MessageBox.Show("Total Amount Deposited " + amount);
            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnCredDone_Click(object sender, EventArgs e)
         {
-            double creAmount = Convert.ToDouble(textBox2.Text);
+            double creAmount = Convert.ToDouble(txtCredAmount.Text);
             MessageBox.Show("The client's credit has been increased by " + creAmount);
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            th = new Thread(openNewForm1000);
+            th = new Thread(OpenCustomerForm);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
         }
 
-        private void openNewForm1000(object obj)
+        private void OpenCustomerForm(object obj)
         {
             Application.Run(new Customer());
         }
 
-        
-
-        Double interior, exterior, both;
-        Double amount = 0.0; 
+        Double interior, exterior, both; 
 
         public double CalculateAmount()
         {
-            if (checkBox1.Checked)
+            Double amount = 0.0;
+
+            if (chkTurning.Checked)
             {
                 engineTurn = 50.00;
                 amount = 50.00;
             }
 
-            if (checkBox2.Checked)
+            if (chkEngOil.Checked)
             {
                 oil = 20.00;
                 amount = amount + 20.00;
-
             }
 
-            if (checkBox3.Checked)
+            if (chkOilFil.Checked)
             {
                 oilFilter = 30.00;
                 amount = amount + 30.00;
 
             }
 
-            if (checkBox4.Checked)
+            if (chkGrease.Checked)
             {
                 grease = 50.00;
                 amount = amount + 50.00;
             }
 
-            if (checkBox5.Checked)
+            if (chkAirFil.Checked)
             {
                 airFilter = 100.00;
                 amount = amount + 100.00;
             }
 
-            if (checkBox6.Checked)
+            if (radInterior.Checked)
             {
                 interior = 100.00;
                 amount = amount + 100;
             }
 
-            if (checkBox7.Checked)
+            if (radExterior.Checked)
             {
                 exterior = 150.00;
                 amount = amount + 150.00;
             }
 
-            if (checkBox8.Checked)
+            if (radBoth.Checked)
             {
                 both = 300.00;
                 amount = amount + 300.00;
@@ -148,9 +148,25 @@ namespace CarWash_System
             return amount; 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BtnEnter_Click(object sender, EventArgs e)
         {
-            listBox2.Items.Add("The total amount the client owes is " + "R" + CalculateAmount()); 
+            String message = "";
+            message = "Maintenance\n";
+            message += "===========================";
+            message += chkTurning.Checked ? "EngineTurning\n" : "";
+            message += chkEngOil.Checked ? "Engine Oil\n" : "";
+            message += chkOilFil.Checked ? "Oil Filter\n" : "";
+            message += chkGrease.Checked ? "Grease & Lubricants\n" : "";
+            message += chkAirFil.Checked ? "Air Filter\n" : "";
+
+            message += "\n";
+            message += "Car Wash\n";
+            message += "===========================";
+            message += radInterior.Checked ? "Interior" : radExterior.Checked ? "Exterior" : radBoth.Checked ? "Both" : "";
+            message += "\n";
+            message += "The total amount the client owes is " + "R" + CalculateAmount();
+            
+            redOutput.Text = message;
         }
     }
 }

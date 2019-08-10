@@ -18,17 +18,27 @@ namespace CarWash_System
         {
             InitializeComponent();
         }
-        private void openNewForm10(object obj)
+        private void OpenWelcomeForm(object obj)
         {
             Application.Run(new WelcomeForm());
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            th = new Thread(openNewForm10);
+            th = new Thread(OpenWelcomeForm);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
+        }
+
+        private void BtnViewClientAcc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnChkCash_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

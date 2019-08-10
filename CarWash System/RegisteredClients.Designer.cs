@@ -36,14 +36,14 @@
             this.btnCheck = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnDone = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCredDone = new System.Windows.Forms.Button();
+            this.txtCredAmount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAppEnter = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtDate = new System.Windows.Forms.TextBox();
             this.txtTime = new System.Windows.Forms.TextBox();
@@ -54,19 +54,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.chkAirFil = new System.Windows.Forms.CheckBox();
+            this.chkGrease = new System.Windows.Forms.CheckBox();
+            this.chkOilFil = new System.Windows.Forms.CheckBox();
+            this.chkEngOil = new System.Windows.Forms.CheckBox();
+            this.chkTurning = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.radBoth = new System.Windows.Forms.RadioButton();
+            this.radExterior = new System.Windows.Forms.RadioButton();
+            this.radInterior = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnEnter = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.redOutput = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -114,27 +114,30 @@
             // 
             // listBox1
             // 
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(84, 88);
+            this.listBox1.Location = new System.Drawing.Point(3, 45);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(228, 95);
+            this.listBox1.Size = new System.Drawing.Size(434, 173);
             this.listBox1.TabIndex = 1;
             // 
             // btnCheck
             // 
-            this.btnCheck.Location = new System.Drawing.Point(173, 44);
+            this.btnCheck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.Location = new System.Drawing.Point(346, 6);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck.Size = new System.Drawing.Size(88, 29);
             this.btnCheck.TabIndex = 0;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
-            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            this.btnCheck.Click += new System.EventHandler(this.BtnCheck_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
             this.tabPage2.Controls.Add(this.btnDone);
-            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.txtAmount);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -146,20 +149,22 @@
             // 
             // btnDone
             // 
+            this.btnDone.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDone.Location = new System.Drawing.Point(174, 135);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(75, 23);
             this.btnDone.TabIndex = 2;
             this.btnDone.Text = "Done";
             this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
+            this.btnDone.Click += new System.EventHandler(this.BtnDone_Click);
             // 
-            // textBox1
+            // txtAmount
             // 
-            this.textBox1.Location = new System.Drawing.Point(174, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtAmount.Location = new System.Drawing.Point(174, 76);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtAmount.TabIndex = 1;
             // 
             // label2
             // 
@@ -174,8 +179,8 @@
             // tabPage3
             // 
             this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
-            this.tabPage3.Controls.Add(this.button1);
-            this.tabPage3.Controls.Add(this.textBox2);
+            this.tabPage3.Controls.Add(this.btnCredDone);
+            this.tabPage3.Controls.Add(this.txtCredAmount);
             this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
@@ -184,22 +189,24 @@
             this.tabPage3.Text = "Request Credit";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCredDone
             // 
-            this.button1.Location = new System.Drawing.Point(182, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Done";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCredDone.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCredDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCredDone.Location = new System.Drawing.Point(182, 127);
+            this.btnCredDone.Name = "btnCredDone";
+            this.btnCredDone.Size = new System.Drawing.Size(75, 23);
+            this.btnCredDone.TabIndex = 5;
+            this.btnCredDone.Text = "Done";
+            this.btnCredDone.UseVisualStyleBackColor = true;
+            this.btnCredDone.Click += new System.EventHandler(this.BtnCredDone_Click);
             // 
-            // textBox2
+            // txtCredAmount
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtCredAmount.Location = new System.Drawing.Point(182, 68);
+            this.txtCredAmount.Name = "txtCredAmount";
+            this.txtCredAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtCredAmount.TabIndex = 4;
             // 
             // label3
             // 
@@ -215,7 +222,7 @@
             // tabPage4
             // 
             this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
-            this.tabPage4.Controls.Add(this.button4);
+            this.tabPage4.Controls.Add(this.btnAppEnter);
             this.tabPage4.Controls.Add(this.txtName);
             this.tabPage4.Controls.Add(this.txtDate);
             this.tabPage4.Controls.Add(this.txtTime);
@@ -231,15 +238,17 @@
             this.tabPage4.Text = "Make Appointment";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnAppEnter
             // 
-            this.button4.Location = new System.Drawing.Point(338, 184);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Enter";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnAppEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAppEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAppEnter.Location = new System.Drawing.Point(338, 184);
+            this.btnAppEnter.Name = "btnAppEnter";
+            this.btnAppEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnAppEnter.TabIndex = 8;
+            this.btnAppEnter.Text = "Enter";
+            this.btnAppEnter.UseVisualStyleBackColor = true;
+            this.btnAppEnter.Click += new System.EventHandler(this.BtnAppEnter_Click);
             // 
             // txtName
             // 
@@ -327,11 +336,11 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.checkBox5);
-            this.groupBox3.Controls.Add(this.checkBox4);
-            this.groupBox3.Controls.Add(this.checkBox3);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.chkAirFil);
+            this.groupBox3.Controls.Add(this.chkGrease);
+            this.groupBox3.Controls.Add(this.chkOilFil);
+            this.groupBox3.Controls.Add(this.chkEngOil);
+            this.groupBox3.Controls.Add(this.chkTurning);
             this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(16, 422);
             this.groupBox3.Name = "groupBox3";
@@ -340,62 +349,62 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Maintenance";
             // 
-            // checkBox5
+            // chkAirFil
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(24, 181);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(63, 17);
-            this.checkBox5.TabIndex = 4;
-            this.checkBox5.Text = "Air Filter";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkAirFil.AutoSize = true;
+            this.chkAirFil.Location = new System.Drawing.Point(24, 181);
+            this.chkAirFil.Name = "chkAirFil";
+            this.chkAirFil.Size = new System.Drawing.Size(63, 17);
+            this.chkAirFil.TabIndex = 4;
+            this.chkAirFil.Text = "Air Filter";
+            this.chkAirFil.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkGrease
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(24, 140);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(133, 17);
-            this.checkBox4.TabIndex = 3;
-            this.checkBox4.Text = "Grease and Lubricants";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkGrease.AutoSize = true;
+            this.chkGrease.Location = new System.Drawing.Point(24, 140);
+            this.chkGrease.Name = "chkGrease";
+            this.chkGrease.Size = new System.Drawing.Size(133, 17);
+            this.chkGrease.TabIndex = 3;
+            this.chkGrease.Text = "Grease and Lubricants";
+            this.chkGrease.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkOilFil
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(24, 102);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(63, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "Oil Filter";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkOilFil.AutoSize = true;
+            this.chkOilFil.Location = new System.Drawing.Point(24, 102);
+            this.chkOilFil.Name = "chkOilFil";
+            this.chkOilFil.Size = new System.Drawing.Size(63, 17);
+            this.chkOilFil.TabIndex = 2;
+            this.chkOilFil.Text = "Oil Filter";
+            this.chkOilFil.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkEngOil
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(24, 65);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(74, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Engine Oil";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkEngOil.AutoSize = true;
+            this.chkEngOil.Location = new System.Drawing.Point(24, 65);
+            this.chkEngOil.Name = "chkEngOil";
+            this.chkEngOil.Size = new System.Drawing.Size(74, 17);
+            this.chkEngOil.TabIndex = 1;
+            this.chkEngOil.Text = "Engine Oil";
+            this.chkEngOil.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkTurning
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(24, 29);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(98, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Engine Turning";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkTurning.AutoSize = true;
+            this.chkTurning.Location = new System.Drawing.Point(24, 29);
+            this.chkTurning.Name = "chkTurning";
+            this.chkTurning.Size = new System.Drawing.Size(98, 17);
+            this.chkTurning.TabIndex = 0;
+            this.chkTurning.Text = "Engine Turning";
+            this.chkTurning.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.checkBox8);
-            this.groupBox4.Controls.Add(this.checkBox7);
-            this.groupBox4.Controls.Add(this.checkBox6);
+            this.groupBox4.Controls.Add(this.radBoth);
+            this.groupBox4.Controls.Add(this.radExterior);
+            this.groupBox4.Controls.Add(this.radInterior);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
             this.groupBox4.Location = new System.Drawing.Point(255, 422);
             this.groupBox4.Name = "groupBox4";
@@ -404,43 +413,38 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Car Wash";
             // 
-            // checkBox8
+            // radBoth
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(34, 130);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(48, 17);
-            this.checkBox8.TabIndex = 3;
-            this.checkBox8.Text = "Both";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.radBoth.AutoSize = true;
+            this.radBoth.Location = new System.Drawing.Point(24, 102);
+            this.radBoth.Name = "radBoth";
+            this.radBoth.Size = new System.Drawing.Size(47, 17);
+            this.radBoth.TabIndex = 9;
+            this.radBoth.TabStop = true;
+            this.radBoth.Text = "Both";
+            this.radBoth.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // radExterior
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(34, 86);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(85, 17);
-            this.checkBox7.TabIndex = 2;
-            this.checkBox7.Text = "Exterior Only";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.radExterior.AutoSize = true;
+            this.radExterior.Location = new System.Drawing.Point(24, 65);
+            this.radExterior.Name = "radExterior";
+            this.radExterior.Size = new System.Drawing.Size(84, 17);
+            this.radExterior.TabIndex = 8;
+            this.radExterior.TabStop = true;
+            this.radExterior.Text = "Exterior Only";
+            this.radExterior.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // radInterior
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(34, 42);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(82, 17);
-            this.checkBox6.TabIndex = 1;
-            this.checkBox6.Text = "Interior Only";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(550, 88);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(392, 550);
-            this.listBox2.TabIndex = 6;
+            this.radInterior.AutoSize = true;
+            this.radInterior.Location = new System.Drawing.Point(24, 29);
+            this.radInterior.Name = "radInterior";
+            this.radInterior.Size = new System.Drawing.Size(81, 17);
+            this.radInterior.TabIndex = 7;
+            this.radInterior.TabStop = true;
+            this.radInterior.Text = "Interior Only";
+            this.radInterior.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -453,41 +457,57 @@
             this.label9.TabIndex = 7;
             this.label9.Text = "Total Amount";
             // 
-            // button2
+            // btnEnter
             // 
-            this.button2.Location = new System.Drawing.Point(16, 677);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Enter";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnEnter.BackColor = System.Drawing.Color.Transparent;
+            this.btnEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnter.Location = new System.Drawing.Point(16, 677);
+            this.btnEnter.Name = "btnEnter";
+            this.btnEnter.Size = new System.Drawing.Size(75, 23);
+            this.btnEnter.TabIndex = 8;
+            this.btnEnter.Text = "Enter";
+            this.btnEnter.UseVisualStyleBackColor = false;
+            this.btnEnter.Click += new System.EventHandler(this.BtnEnter_Click);
             // 
-            // button3
+            // btnCancel
             // 
-            this.button3.Location = new System.Drawing.Point(867, 677);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 9;
-            this.button3.Text = "Cancel";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Location = new System.Drawing.Point(867, 677);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
+            // redOutput
+            // 
+            this.redOutput.Location = new System.Drawing.Point(606, 101);
+            this.redOutput.Name = "redOutput";
+            this.redOutput.Size = new System.Drawing.Size(317, 549);
+            this.redOutput.TabIndex = 10;
+            this.redOutput.Text = "";
             // 
             // RegisteredClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(976, 712);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.redOutput);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "RegisteredClients";
             this.Text = "RegisteredClients";
             this.tabControl1.ResumeLayout(false);
@@ -515,11 +535,11 @@
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnDone;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnCredDone;
+        private System.Windows.Forms.TextBox txtCredAmount;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Label label7;
@@ -533,19 +553,19 @@
         private System.Windows.Forms.TextBox txtAppNum;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox chkAirFil;
+        private System.Windows.Forms.CheckBox chkGrease;
+        private System.Windows.Forms.CheckBox chkOilFil;
+        private System.Windows.Forms.CheckBox chkEngOil;
+        private System.Windows.Forms.CheckBox chkTurning;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnAppEnter;
+        private System.Windows.Forms.RadioButton radBoth;
+        private System.Windows.Forms.RadioButton radExterior;
+        private System.Windows.Forms.RadioButton radInterior;
+        private System.Windows.Forms.RichTextBox redOutput;
     }
 }

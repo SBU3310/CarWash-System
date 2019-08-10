@@ -19,25 +19,25 @@ namespace CarWash_System
             InitializeComponent();
         }
 
-        private void openCustForm(object obj)
+        private void OpenCustForm(object obj)
         {
             Application.Run(new Customer());
         }
 
-        private void openManForm(object obj)
+        private void OpenManForm(object obj)
         {
             Application.Run(new Management());
         }
 
-        private void openRecepForm(object obj)
+        private void OpenRecepForm(object obj)
         {
             Application.Run(new Receptionist());
         }
 
-        private void btnCustomer_Click(object sender, EventArgs e)
+        private void BtnCustomer_Click(object sender, EventArgs e)
         {
             this.Close();
-            th = new Thread(openCustForm);
+            th = new Thread(OpenCustForm);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
 
@@ -45,10 +45,10 @@ namespace CarWash_System
             myCust.Show(); 
         }
 
-        private void btnManagement_Click(object sender, EventArgs e)
+        private void BtnManagement_Click(object sender, EventArgs e)
         {
             this.Close();
-            th = new Thread(openManForm);
+            th = new Thread(OpenManForm);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
 
@@ -56,10 +56,10 @@ namespace CarWash_System
             myMan.Show();
         }
 
-        private void btnReceptionist_Click(object sender, EventArgs e)
+        private void BtnReceptionist_Click(object sender, EventArgs e)
         {
             this.Close();
-            th = new Thread(openRecepForm);
+            th = new Thread(OpenRecepForm);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
 
@@ -67,7 +67,7 @@ namespace CarWash_System
             myRec.Show(); 
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Are you sure you want to exit?", "Application Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -75,6 +75,11 @@ namespace CarWash_System
             {
                 Application.Exit();
             }
+        }
+
+        private void WelcomeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

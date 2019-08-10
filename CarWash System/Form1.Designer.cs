@@ -61,7 +61,7 @@
             this.btnCustomer.TabIndex = 1;
             this.btnCustomer.Text = "Customer";
             this.btnCustomer.UseVisualStyleBackColor = false;
-            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            this.btnCustomer.Click += new System.EventHandler(this.BtnCustomer_Click);
             // 
             // btnManagement
             // 
@@ -74,7 +74,7 @@
             this.btnManagement.TabIndex = 2;
             this.btnManagement.Text = "Management";
             this.btnManagement.UseVisualStyleBackColor = false;
-            this.btnManagement.Click += new System.EventHandler(this.btnManagement_Click);
+            this.btnManagement.Click += new System.EventHandler(this.BtnManagement_Click);
             // 
             // btnReceptionist
             // 
@@ -87,7 +87,7 @@
             this.btnReceptionist.TabIndex = 3;
             this.btnReceptionist.Text = "Receptionist";
             this.btnReceptionist.UseVisualStyleBackColor = false;
-            this.btnReceptionist.Click += new System.EventHandler(this.btnReceptionist_Click);
+            this.btnReceptionist.Click += new System.EventHandler(this.BtnReceptionist_Click);
             // 
             // menuStrip1
             // 
@@ -114,7 +114,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
             this.exitToolStripMenuItem.Text = "E&xit ";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -136,6 +136,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "WelcomeForm";
             this.Text = "Welcome";
+            this.Load += new System.EventHandler(this.WelcomeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

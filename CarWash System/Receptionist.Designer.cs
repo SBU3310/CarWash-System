@@ -34,7 +34,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnAppoint = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cmbDate = new System.Windows.Forms.ComboBox();
             this.txtExpenses = new System.Windows.Forms.TextBox();
             this.txtIncome = new System.Windows.Forms.TextBox();
             this.txtNum = new System.Windows.Forms.TextBox();
@@ -44,6 +43,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnEnter = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -84,17 +84,20 @@
             // 
             // btnAppoint
             // 
+            this.btnAppoint.BackColor = System.Drawing.Color.Transparent;
+            this.btnAppoint.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAppoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppoint.Location = new System.Drawing.Point(6, 364);
             this.btnAppoint.Name = "btnAppoint";
             this.btnAppoint.Size = new System.Drawing.Size(135, 23);
             this.btnAppoint.TabIndex = 0;
             this.btnAppoint.Text = "View Appointment";
-            this.btnAppoint.UseVisualStyleBackColor = true;
+            this.btnAppoint.UseVisualStyleBackColor = false;
             // 
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
-            this.tabPage2.Controls.Add(this.cmbDate);
+            this.tabPage2.Controls.Add(this.dateTimePicker1);
             this.tabPage2.Controls.Add(this.txtExpenses);
             this.tabPage2.Controls.Add(this.txtIncome);
             this.tabPage2.Controls.Add(this.txtNum);
@@ -111,33 +114,25 @@
             this.tabPage2.Text = "Input Daily Transaction";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // cmbDate
-            // 
-            this.cmbDate.FormattingEnabled = true;
-            this.cmbDate.Location = new System.Drawing.Point(273, 125);
-            this.cmbDate.Name = "cmbDate";
-            this.cmbDate.Size = new System.Drawing.Size(194, 21);
-            this.cmbDate.TabIndex = 10;
-            // 
             // txtExpenses
             // 
-            this.txtExpenses.Location = new System.Drawing.Point(273, 255);
+            this.txtExpenses.Location = new System.Drawing.Point(273, 253);
             this.txtExpenses.Name = "txtExpenses";
-            this.txtExpenses.Size = new System.Drawing.Size(194, 20);
+            this.txtExpenses.Size = new System.Drawing.Size(200, 20);
             this.txtExpenses.TabIndex = 9;
             // 
             // txtIncome
             // 
-            this.txtIncome.Location = new System.Drawing.Point(273, 182);
+            this.txtIncome.Location = new System.Drawing.Point(273, 192);
             this.txtIncome.Name = "txtIncome";
-            this.txtIncome.Size = new System.Drawing.Size(194, 20);
+            this.txtIncome.Size = new System.Drawing.Size(200, 20);
             this.txtIncome.TabIndex = 8;
             // 
             // txtNum
             // 
             this.txtNum.Location = new System.Drawing.Point(273, 70);
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(194, 20);
+            this.txtNum.Size = new System.Drawing.Size(200, 20);
             this.txtNum.TabIndex = 6;
             // 
             // label5
@@ -157,7 +152,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Window;
-            this.label4.Location = new System.Drawing.Point(52, 180);
+            this.label4.Location = new System.Drawing.Point(52, 192);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 20);
             this.label4.TabIndex = 4;
@@ -169,7 +164,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Window;
-            this.label3.Location = new System.Drawing.Point(52, 123);
+            this.label3.Location = new System.Drawing.Point(52, 131);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 20);
             this.label3.TabIndex = 3;
@@ -181,7 +176,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Window;
-            this.label2.Location = new System.Drawing.Point(52, 68);
+            this.label2.Location = new System.Drawing.Point(52, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 20);
             this.label2.TabIndex = 2;
@@ -190,22 +185,35 @@
             // 
             // btnEnter
             // 
+            this.btnEnter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnEnter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnter.Location = new System.Drawing.Point(428, 364);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(171, 23);
             this.btnEnter.TabIndex = 1;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = true;
+            this.btnEnter.Click += new System.EventHandler(this.BtnEnter_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Location = new System.Drawing.Point(22, 540);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(273, 131);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 11;
             // 
             // Receptionist
             // 
@@ -239,10 +247,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbDate;
         private System.Windows.Forms.TextBox txtExpenses;
         private System.Windows.Forms.TextBox txtIncome;
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

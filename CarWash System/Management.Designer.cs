@@ -32,9 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnViewClientAccount = new System.Windows.Forms.Button();
-            this.btnCheckCashFlow = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnChkCash = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -74,10 +74,22 @@
             this.tabPage1.Text = "View Client Account";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnViewClientAccount
+            // 
+            this.btnViewClientAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnViewClientAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewClientAccount.Location = new System.Drawing.Point(6, 313);
+            this.btnViewClientAccount.Name = "btnViewClientAccount";
+            this.btnViewClientAccount.Size = new System.Drawing.Size(142, 23);
+            this.btnViewClientAccount.TabIndex = 0;
+            this.btnViewClientAccount.Text = "View Client Account";
+            this.btnViewClientAccount.UseVisualStyleBackColor = true;
+            this.btnViewClientAccount.Click += new System.EventHandler(this.BtnViewClientAcc_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage2.BackgroundImage")));
-            this.tabPage2.Controls.Add(this.btnCheckCashFlow);
+            this.tabPage2.Controls.Add(this.btnChkCash);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -86,33 +98,30 @@
             this.tabPage2.Text = "Check Daily Cash Flow";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btnViewClientAccount
+            // btnChkCash
             // 
-            this.btnViewClientAccount.Location = new System.Drawing.Point(6, 313);
-            this.btnViewClientAccount.Name = "btnViewClientAccount";
-            this.btnViewClientAccount.Size = new System.Drawing.Size(142, 23);
-            this.btnViewClientAccount.TabIndex = 0;
-            this.btnViewClientAccount.Text = "View Client Account";
-            this.btnViewClientAccount.UseVisualStyleBackColor = true;
-            // 
-            // btnCheckCashFlow
-            // 
-            this.btnCheckCashFlow.Location = new System.Drawing.Point(6, 313);
-            this.btnCheckCashFlow.Name = "btnCheckCashFlow";
-            this.btnCheckCashFlow.Size = new System.Drawing.Size(142, 23);
-            this.btnCheckCashFlow.TabIndex = 1;
-            this.btnCheckCashFlow.Text = "Check Daily Cash Flow";
-            this.btnCheckCashFlow.UseVisualStyleBackColor = true;
+            this.btnChkCash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnChkCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChkCash.Location = new System.Drawing.Point(6, 313);
+            this.btnChkCash.Name = "btnChkCash";
+            this.btnChkCash.Size = new System.Drawing.Size(142, 23);
+            this.btnChkCash.TabIndex = 1;
+            this.btnChkCash.Text = "Check Daily Cash Flow";
+            this.btnChkCash.UseVisualStyleBackColor = true;
+            this.btnChkCash.Click += new System.EventHandler(this.BtnChkCash_Click);
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Location = new System.Drawing.Point(22, 488);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // Management
             // 
@@ -140,7 +149,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnViewClientAccount;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btnCheckCashFlow;
+        private System.Windows.Forms.Button btnChkCash;
         private System.Windows.Forms.Button btnCancel;
     }
 }

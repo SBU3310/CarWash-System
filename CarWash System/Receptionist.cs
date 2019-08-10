@@ -39,7 +39,7 @@ namespace CarWash_System
 
         }
 
-        private void openNewForm10(object obj)
+        private void OpenWelcomeForm(object obj)
         {
             Application.Run(new WelcomeForm());
         }
@@ -47,9 +47,14 @@ namespace CarWash_System
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
-            th = new Thread(openNewForm10);
+            th = new Thread(OpenWelcomeForm);
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
+        }
+
+        private void BtnEnter_Click(object sender, EventArgs e)
+        {
+            string transNum;
         }
     }
 }

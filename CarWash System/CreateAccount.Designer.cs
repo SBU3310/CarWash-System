@@ -53,7 +53,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnEnter = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -83,9 +83,9 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 89);
+            this.groupBox1.Location = new System.Drawing.Point(12, 60);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(740, 420);
+            this.groupBox1.Size = new System.Drawing.Size(740, 448);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account";
@@ -96,10 +96,10 @@
             this.cmbDebit.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cmbDebit.Location = new System.Drawing.Point(595, 307);
+            this.cmbDebit.Location = new System.Drawing.Point(595, 362);
             this.cmbDebit.Name = "cmbDebit";
             this.cmbDebit.Size = new System.Drawing.Size(84, 21);
-            this.cmbDebit.TabIndex = 21;
+            this.cmbDebit.TabIndex = 19;
             // 
             // cmbCredit
             // 
@@ -107,10 +107,10 @@
             this.cmbCredit.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.cmbCredit.Location = new System.Drawing.Point(595, 353);
+            this.cmbCredit.Location = new System.Drawing.Point(595, 408);
             this.cmbCredit.Name = "cmbCredit";
             this.cmbCredit.Size = new System.Drawing.Size(82, 21);
-            this.cmbCredit.TabIndex = 20;
+            this.cmbCredit.TabIndex = 19;
             // 
             // cmbCarModel
             // 
@@ -124,42 +124,42 @@
             "Toyota",
             "Nissan",
             "Mercedez Benz"});
-            this.cmbCarModel.Location = new System.Drawing.Point(195, 232);
+            this.cmbCarModel.Location = new System.Drawing.Point(195, 287);
             this.cmbCarModel.Name = "cmbCarModel";
             this.cmbCarModel.Size = new System.Drawing.Size(242, 21);
-            this.cmbCarModel.TabIndex = 19;
+            this.cmbCarModel.TabIndex = 15;
             // 
             // txtAccNum
             // 
-            this.txtAccNum.Location = new System.Drawing.Point(195, 353);
+            this.txtAccNum.Location = new System.Drawing.Point(195, 408);
             this.txtAccNum.Name = "txtAccNum";
             this.txtAccNum.Size = new System.Drawing.Size(242, 20);
             this.txtAccNum.TabIndex = 18;
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(195, 273);
+            this.txtAmount.Location = new System.Drawing.Point(195, 328);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(242, 20);
-            this.txtAmount.TabIndex = 17;
+            this.txtAmount.TabIndex = 16;
             // 
             // txtBankName
             // 
-            this.txtBankName.Location = new System.Drawing.Point(195, 313);
+            this.txtBankName.Location = new System.Drawing.Point(195, 368);
             this.txtBankName.Name = "txtBankName";
             this.txtBankName.Size = new System.Drawing.Size(242, 20);
-            this.txtBankName.TabIndex = 16;
+            this.txtBankName.TabIndex = 17;
             // 
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(195, 112);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(242, 20);
-            this.txtID.TabIndex = 15;
+            this.txtID.TabIndex = 12;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(195, 192);
+            this.txtEmail.Location = new System.Drawing.Point(195, 247);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(242, 20);
             this.txtEmail.TabIndex = 14;
@@ -167,9 +167,10 @@
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(195, 152);
+            this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(242, 20);
-            this.txtAddress.TabIndex = 12;
+            this.txtAddress.Size = new System.Drawing.Size(242, 76);
+            this.txtAddress.TabIndex = 13;
             // 
             // txtSurname
             // 
@@ -190,7 +191,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Window;
-            this.label12.Location = new System.Drawing.Point(499, 355);
+            this.label12.Location = new System.Drawing.Point(499, 410);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 16);
             this.label12.TabIndex = 9;
@@ -201,7 +202,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Window;
-            this.label11.Location = new System.Drawing.Point(499, 308);
+            this.label11.Location = new System.Drawing.Point(499, 363);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 16);
             this.label11.TabIndex = 8;
@@ -212,7 +213,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Window;
-            this.label10.Location = new System.Drawing.Point(16, 353);
+            this.label10.Location = new System.Drawing.Point(16, 408);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(110, 16);
             this.label10.TabIndex = 7;
@@ -223,7 +224,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Window;
-            this.label9.Location = new System.Drawing.Point(16, 313);
+            this.label9.Location = new System.Drawing.Point(16, 368);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(82, 16);
             this.label9.TabIndex = 6;
@@ -234,7 +235,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Window;
-            this.label8.Location = new System.Drawing.Point(16, 273);
+            this.label8.Location = new System.Drawing.Point(16, 328);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(164, 16);
             this.label8.TabIndex = 4;
@@ -245,7 +246,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Window;
-            this.label7.Location = new System.Drawing.Point(16, 233);
+            this.label7.Location = new System.Drawing.Point(16, 288);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 16);
             this.label7.TabIndex = 5;
@@ -256,7 +257,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Window;
-            this.label6.Location = new System.Drawing.Point(16, 193);
+            this.label6.Location = new System.Drawing.Point(16, 248);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 16);
             this.label6.TabIndex = 4;
@@ -317,27 +318,27 @@
             this.btnEnter.TabIndex = 1;
             this.btnEnter.Text = "Enter";
             this.btnEnter.UseVisualStyleBackColor = false;
-            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
+            this.btnEnter.Click += new System.EventHandler(this.BtnEnter_Click);
             // 
-            // btnCancel
+            // btnBack
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Location = new System.Drawing.Point(631, 543);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(121, 27);
-            this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnBack.BackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Location = new System.Drawing.Point(631, 543);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(121, 27);
+            this.btnBack.TabIndex = 2;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(0, 40);
+            this.label1.Location = new System.Drawing.Point(0, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(764, 24);
             this.label1.TabIndex = 3;
@@ -351,7 +352,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(764, 582);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.groupBox1);
             this.Name = "CreateAccount";
@@ -389,7 +390,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnEnter;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
     }
 }
