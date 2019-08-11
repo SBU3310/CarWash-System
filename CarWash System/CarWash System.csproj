@@ -103,11 +103,35 @@
     <Compile Include="RegisteredClients.Designer.cs">
       <DependentUpon>RegisteredClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCAppointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAppointment.Designer.cs">
+      <DependentUpon>UCAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCheckBal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCheckBal.Designer.cs">
+      <DependentUpon>UCCheckBal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRegHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRegHome.Designer.cs">
+      <DependentUpon>UCRegHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCRegistered.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCRegistered.Designer.cs">
       <DependentUpon>UCRegistered.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTransaction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTransaction.Designer.cs">
+      <DependentUpon>UCTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="UCUnregistered.cs">
       <SubType>UserControl</SubType>
@@ -142,8 +166,20 @@
     <EmbeddedResource Include="RegisteredClients.resx">
       <DependentUpon>RegisteredClients.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCAppointment.resx">
+      <DependentUpon>UCAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCheckBal.resx">
+      <DependentUpon>UCCheckBal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRegHome.resx">
+      <DependentUpon>UCRegHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCRegistered.resx">
       <DependentUpon>UCRegistered.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTransaction.resx">
+      <DependentUpon>UCTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCUnregistered.resx">
       <DependentUpon>UCUnregistered.cs</DependentUpon>

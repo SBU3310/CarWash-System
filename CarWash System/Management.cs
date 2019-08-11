@@ -40,5 +40,10 @@ namespace CarWash_System
         {
 
         }
+
+        private void Management_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

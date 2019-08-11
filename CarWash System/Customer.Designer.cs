@@ -105,7 +105,12 @@
             this.Controls.Add(this.pnlContainer);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(807, 685);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(807, 685);
             this.Name = "Customer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Customer";
             this.Load += new System.EventHandler(this.Customer_Load);
             this.panel1.ResumeLayout(false);

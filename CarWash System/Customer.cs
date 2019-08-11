@@ -31,6 +31,7 @@ namespace CarWash_System
             get { return pnlContainer; }
             set { pnlContainer = value; }
         }
+
         public Customer()
         {
             InitializeComponent();
