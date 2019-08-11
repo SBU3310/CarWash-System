@@ -54,7 +54,7 @@
             // 
             this.btnCustomer.BackColor = System.Drawing.Color.Transparent;
             this.btnCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomer.Location = new System.Drawing.Point(245, 250);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(119, 60);
