@@ -355,7 +355,12 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(780, 621);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(780, 621);
             this.Name = "CreateAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";
             this.Load += new System.EventHandler(this.CreateAccount_Load);
             this.groupBox1.ResumeLayout(false);
