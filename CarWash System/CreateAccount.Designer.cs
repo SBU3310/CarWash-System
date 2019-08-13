@@ -342,7 +342,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(764, 24);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Client Create an Account...";
+            this.label1.Text = "Create an Account...";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // CreateAccount

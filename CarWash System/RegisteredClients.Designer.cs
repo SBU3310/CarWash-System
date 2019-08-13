@@ -53,9 +53,10 @@
             // 
             // btnApp
             // 
+            this.btnApp.FlatAppearance.BorderSize = 2;
             this.btnApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApp.Location = new System.Drawing.Point(3, 114);
+            this.btnApp.Location = new System.Drawing.Point(3, 100);
             this.btnApp.Name = "btnApp";
             this.btnApp.Size = new System.Drawing.Size(160, 51);
             this.btnApp.TabIndex = 3;
@@ -65,9 +66,10 @@
             // 
             // btnTrans
             // 
+            this.btnTrans.FlatAppearance.BorderSize = 2;
             this.btnTrans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrans.Location = new System.Drawing.Point(3, 57);
+            this.btnTrans.Location = new System.Drawing.Point(3, 50);
             this.btnTrans.Name = "btnTrans";
             this.btnTrans.Size = new System.Drawing.Size(160, 51);
             this.btnTrans.TabIndex = 2;
@@ -77,6 +79,7 @@
             // 
             // btnHome
             // 
+            this.btnHome.FlatAppearance.BorderSize = 2;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Location = new System.Drawing.Point(3, 0);
